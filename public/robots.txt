@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://ryanforsyth.dev/sitemap.xml
+Crawl-delay: 1

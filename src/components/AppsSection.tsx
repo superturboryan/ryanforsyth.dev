@@ -5,7 +5,7 @@ export default function AppsSection() {
         <h2 className="section-title">Apps</h2>
         <div className="apps-grid">
           <div className="app-card">
-            <img src="/watchcloud.png" alt="WatchCloud icon" className="app-icon" />
+            <img src="/apps/watchcloud.png" alt="WatchCloud icon" className="app-icon" />
             <h3 className="app-name">WatchCloud</h3>
             <div className="platform-tags">
               <span className="platform-tag">iOS</span>
@@ -33,7 +33,7 @@ export default function AppsSection() {
           </div>
 
           <div className="app-card">
-            <img src="/locationlock.png" alt="LocationLock icon" className="app-icon" />
+            <img src="/apps/locationlock.png" alt="LocationLock icon" className="app-icon" />
             <h3 className="app-name">LocationLock</h3>
             <div className="platform-tags">
               <span className="platform-tag">iOS</span>
@@ -46,7 +46,7 @@ export default function AppsSection() {
           </div>
 
           <div className="app-card">
-            <img src="/tethr.png" alt="Tethr icon" className="app-icon" />
+            <img src="/apps/tethr.png" alt="Tethr icon" className="app-icon" />
             <h3 className="app-name">Tethr</h3>
             <div className="platform-tags">
               <span className="platform-tag">watchOS</span>
@@ -59,7 +59,7 @@ export default function AppsSection() {
           </div>
 
           <div className="app-card">
-            <img src="/schedule-a-click.png" alt="Schedule-A-Click icon" className="app-icon" />
+            <img src="/apps/schedule-a-click.png" alt="Schedule-A-Click icon" className="app-icon" />
             <h3 className="app-name">Schedule-A-Click</h3>
             <div className="platform-tags">
               <span className="platform-tag">macOS</span>
@@ -71,7 +71,7 @@ export default function AppsSection() {
           </div>
 
           <div className="app-card">
-            <img src="/magic-tapper.png" alt="Magic Tapper icon" className="app-icon" />
+            <img src="/apps/magic-tapper.png" alt="Magic Tapper icon" className="app-icon" />
             <h3 className="app-name">Magic Tapper</h3>
             <div className="platform-tags">
               <span className="platform-tag">iOS</span>
