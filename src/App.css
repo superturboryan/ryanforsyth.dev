@@ -176,79 +176,75 @@
 }
 
 .app-card {
-  padding: var(--spacing-md);
+  padding: clamp(1.5rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
+  text-align: left;
+}
+
+.app-card-header {
+  display: flex;
   align-items: center;
-  text-align: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-card-heading {
+  min-width: 0;
 }
 
 .app-icon {
-  width: 96px;
-  height: 96px;
-  border-radius: 22px;
-  margin-bottom: var(--spacing-md);
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 15px;
 }
 
-
 .app-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.375rem;
   color: var(--text-primary);
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
-.platform-tags {
-  display: flex;
-  gap: 0.375rem;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.platform-tag {
-  font-size: 0.625rem;
-  font-weight: 500;
-  padding: 0.125rem 0.375rem;
-  border-radius: 3px;
-  background-color: var(--bg-tertiary);
+.app-platforms {
+  font-size: 0.75rem;
   color: var(--text-secondary);
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  transition: all var(--transition);
-}
-
-.platform-tag:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-@media (prefers-color-scheme: light) {
-  .platform-tag {
-    background-color: var(--bg-tertiary);
-  }
-
-  .platform-tag:hover {
-    background-color: rgba(0, 0, 0, 0.08);
-  }
+  line-height: 1.6;
+  text-wrap: balance;
 }
 
 .app-description {
-  margin-bottom: var(--spacing-md);
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
   color: var(--text-secondary);
   flex-grow: 1;
 }
 
-.app-website-link {
-  color: var(--text-secondary);
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.app-links a {
+  display: inline-block;
+  padding-block: 0.625rem;
+  min-height: 44px;
+  font-size: 0.875rem;
   font-weight: 500;
-  transition: color var(--transition);
-  text-decoration: none;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
   white-space: nowrap;
 }
 
-.app-website-link:hover {
-  color: var(--text-primary);
+.app-links a:hover {
+  text-decoration: underline;
+}
+
+.app-links a + a {
+  color: var(--text-secondary);
 }
 
 /* ===== Footer ===== */
@@ -270,6 +266,12 @@
 }
 
 /* ===== Responsive Adjustments ===== */
+@media (max-width: 767px) {
+  .app-description {
+    text-wrap: pretty;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 80vh;
