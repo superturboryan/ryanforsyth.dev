@@ -19,6 +19,9 @@
   --accent: #ffffff;
   --accent-hover: rgba(255, 255, 255, 0.85);
 
+  --card-border: rgba(255, 255, 255, 0.06);
+  --spotlight-color: rgba(255, 255, 255, 0.055);
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -42,6 +45,8 @@
 /* Light mode override */
 @media (prefers-color-scheme: light) {
   :root {
+    --card-border: rgba(0, 0, 0, 0.06);
+    --spotlight-color: rgba(0, 0, 0, 0.035);
     --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
     --bg-tertiary: #e8e8e8;
@@ -125,6 +130,7 @@ button {
   transition: all var(--transition);
 }
 
+a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -174,5 +180,19 @@ button:focus-visible {
 
   h3 {
     font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+  }
+
+  .btn:hover {
+    transform: none;
   }
 }

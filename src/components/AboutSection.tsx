@@ -1,7 +1,9 @@
+import FadeContent from './FadeContent';
+
 export default function AboutSection() {
   return (
     <section id="about" className="section">
-      <div className="section-content">
+      <FadeContent className="section-content">
         <h2 className="section-title">About</h2>
         <div className="about-text">
           <p>
@@ -15,7 +17,7 @@ export default function AboutSection() {
             community.
           </p>
         </div>
-      </div>
+      </FadeContent>
     </section>
   );
 }

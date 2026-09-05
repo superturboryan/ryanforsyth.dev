@@ -1,14 +1,16 @@
+import FadeContent from './FadeContent';
+
 export default function HeroSection() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
     }
   };
 
   return (
     <section className="hero">
-      <div className="hero-content">
+      <FadeContent className="hero-content">
         <h1 className="hero-title">Ryan Forsyth</h1>
         <p className="hero-subtitle">Apple Platforms Engineer & Indie App Creator</p>
         <p className="hero-description">
@@ -20,7 +22,7 @@ export default function HeroSection() {
             View Apps →
           </button>
         </div>
-      </div>
+      </FadeContent>
     </section>
   );
 }

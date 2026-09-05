@@ -181,12 +181,8 @@
   height: 96px;
   border-radius: 22px;
   margin-bottom: var(--spacing-md);
-  transition: transform var(--transition);
 }
 
-.app-card:hover .app-icon {
-  transform: scale(1.05);
-}
 
 .app-name {
   font-size: 1.5rem;
@@ -284,5 +280,80 @@
 
   .nav-link {
     font-size: 0.875rem;
+  }
+}
+
+/* Quiet entrances inspired by React Bits Fade Content. */
+.fade-content {
+  opacity: 1;
+}
+
+.fade-content[data-visible="true"] {
+  animation: content-entrance 450ms ease-out var(--reveal-delay, 0ms) both;
+}
+
+@keyframes content-entrance {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-content[data-visible="false"] {
+  opacity: 0;
+}
+
+.fade-content[data-visible][data-immediate="true"] {
+  opacity: 1;
+  animation: none;
+}
+
+.app-reveal {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .app-reveal:nth-child(even) {
+    --reveal-delay: 60ms;
+  }
+}
+
+/* Broad, neutral light; the overlay never intercepts links. */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  transition: border-color var(--transition);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(320px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), var(--spotlight-color), transparent 75%);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.spotlight-card[data-spotlight="true"]::before {
+  opacity: 1;
+}
+
+.spotlight-card:has(:focus-visible) {
+  border-color: var(--text-tertiary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-content,
+  .fade-content[data-visible] {
+    opacity: 1;
+    animation: none;
+  }
+
+  .spotlight-card::before {
+    display: none;
   }
 }
