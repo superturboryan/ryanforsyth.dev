@@ -27,7 +27,7 @@ export default function AppsSection() {
               <span className="platform-tag">Android</span>
             </div>
             <p className="app-description">
-              Control Apple devices with your Di2 bike.
+              Control Apple devices with your Di2 bike. <a href="https://bike-connect.app" target="_blank" rel="noopener noreferrer" className="app-website-link">Learn more →</a>
             </p>
             <a href="https://apps.apple.com/us/app/bike-connect-ride-in-control/id6746517051" target="_blank" rel="noopener noreferrer" className="btn btn-primary">View on App Store</a>
           </div>
