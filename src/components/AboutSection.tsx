@@ -7,14 +7,17 @@ export default function AboutSection() {
         <h2 className="section-title">About</h2>
         <div className="about-text">
           <p>
-            I'm passionate about building native experiences for Apple platforms. 
-            With a focus on Swift and SwiftUI, I create apps that feel at home on your devices.
+            I'm a senior iOS engineer with over seven years of experience building and
+            shipping apps. At Dyson, I worked on connected-device setup and control;
+            at Meta, I helped improve account recovery and content review workflows.
           </p>
           <p>
-            Beyond app development, I'm particularly interested in Bluetooth and connected
-            device ecosystems. I've had the opportunity to share my knowledge at iOS
-            conferences, speaking about topics I'm passionate about in the Apple developer
-            community.
+            Independently, I create apps including WatchCloud and Bike Connect, using
+            Swift and SwiftUI to build experiences that feel at home on Apple devices.
+            I also share what I learn with the developer community, including a talk on{' '}
+            <a href="https://www.youtube.com/watch?v=lslot4B_4y0" target="_blank" rel="noopener noreferrer">
+              practical Core Bluetooth
+            </a>{' '}at iOS Conf SG 2025.
           </p>
         </div>
       </FadeContent>

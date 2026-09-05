@@ -76,6 +76,7 @@
 }
 
 .hero-description {
+  text-wrap: balance;
   font-size: 1.125rem;
   color: var(--text-secondary);
   margin-bottom: var(--spacing-2xl);
@@ -147,6 +148,12 @@
 
 .about-text p:last-child {
   margin-bottom: 0;
+}
+
+.about-text a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 /* ===== Apps Section ===== */
