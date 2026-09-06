@@ -16,8 +16,9 @@
   --text-secondary: rgba(255, 255, 255, 0.65);
   --text-tertiary: rgba(255, 255, 255, 0.45);
   --border-color: rgba(255, 255, 255, 0.1);
-  --accent: #ffffff;
-  --accent-hover: rgba(255, 255, 255, 0.85);
+  --accent: #a5a9eb;
+  --accent-hover: #bec1f5;
+  --accent-soft: rgba(165, 169, 235, 0.12);
 
   --card-border: rgba(255, 255, 255, 0.06);
   --spotlight-color: rgba(255, 255, 255, 0.055);
@@ -54,8 +55,9 @@
     --text-secondary: rgba(0, 0, 0, 0.65);
     --text-tertiary: rgba(0, 0, 0, 0.45);
     --border-color: rgba(0, 0, 0, 0.1);
-    --accent: #000000;
-    --accent-hover: rgba(0, 0, 0, 0.75);
+    --accent: #6266aa;
+    --accent-hover: #535797;
+    --accent-soft: rgba(98, 102, 170, 0.09);
   }
 }
 
@@ -115,8 +117,9 @@ a {
   transition: color var(--transition);
 }
 
-a:hover {
-  color: var(--text-secondary);
+a:hover,
+a:focus-visible {
+  color: var(--accent-hover);
 }
 
 /* ===== Buttons ===== */
