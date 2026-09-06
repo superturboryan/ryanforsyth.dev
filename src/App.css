@@ -273,8 +273,15 @@
 }
 
 @media (max-width: 768px) {
+  .app {
+    --nav-link-line-height: 1.4rem;
+    /* Navigation padding, link padding, and one line of text. */
+    --header-height: calc(2 * var(--spacing-md) + 2 * var(--spacing-xs) + var(--nav-link-line-height));
+  }
+
   .hero {
-    min-height: 80vh;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
     padding: var(--spacing-xl) var(--spacing-md);
   }
 
@@ -289,6 +296,7 @@
 
   .nav-link {
     font-size: 0.875rem;
+    line-height: var(--nav-link-line-height);
   }
 }
 
