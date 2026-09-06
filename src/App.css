@@ -106,7 +106,7 @@
 
 .hero-subtitle {
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  color: var(--text-secondary);
+  color: var(--accent);
   margin-bottom: var(--spacing-2xl);
   font-weight: 400;
 }
@@ -325,6 +325,10 @@
     min-height: calc(100vh - var(--header-height));
     min-height: calc(100svh - var(--header-height));
     padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .hero-title {
+    margin-bottom: var(--spacing-sm);
   }
 
   .section {
